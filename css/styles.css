@@ -21,6 +21,19 @@ main {
   flex-wrap: wrap;
 }
 
+/* Custom UI Controls */
+  .plyr--full-ui input[type="range"] {
+    color: #ffd700;
+  }
+
+  .plyr__time {
+    font-size: 15px;
+  }
+
+  .plyr button {
+    color: #ffd700;
+  }
+
 /* Media Queries */
 /* 
   Mobile: 
