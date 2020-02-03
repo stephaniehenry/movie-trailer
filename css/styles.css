@@ -52,6 +52,11 @@ h2 {
   color: #F7B626;
 }
 
+.info {
+  border: solid red 2px;
+  margin: 400px 40px 40px 40px;
+}
+
 .cast {  
   display: flex;
   flex-wrap: wrap;
