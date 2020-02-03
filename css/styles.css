@@ -5,34 +5,89 @@
   * Outline Elements
 */
 
-* {
-    outline: 1px dotted black;
+
+@import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
+
+body {
+  background-image: url("/imgs/background2.jpg");
+  background-size: cover;
 }
 
-main { 
-  margin: 0 auto;
-    
+main {
+  margin: 30px 100px 30px 100px;
   display: grid;
   grid-template-columns: 1fr;
+}
+header {
+  margin: auto;
+}
+h1 {
+  font-family: 'Sniglet', cursive;
+  font-size: 7em;
+  color: black;
+  text-align: center;
+}
+
+blockquote {
+  font-family: 'Sniglet', cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Sniglet', cursive;
+  font-size: 1.25em;
+}
+
+
+.plyr--full-ui input[type="range"] {
+  color: #F7B626;
+}
+
+.plyr__time {
+  font-size: 15px;
+}
+
+.plyr button {
+  color: #F7B626;
 }
 
 .cast {  
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* Custom UI Controls */
-  .plyr--full-ui input[type="range"] {
-    color: #ffd700;
-  }
+figure {
+  height: 300px;
+  width: 200px;
+  outline: solid red 2px;
+  text-align: center;
+}
 
-  .plyr__time {
-    font-size: 15px;
-  }
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  
+}
 
-  .plyr button {
-    color: #ffd700;
-  }
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #CD0000;
+  font-family: 'Sniglet', cursive;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 
 /* Media Queries */
 /* 
@@ -46,7 +101,7 @@ main {
     
     /* Diagnostic Styling. Delete When Done. */
     body:before {
-         background: cyan;
+         background: yellow;
          content: "Mobile Size";
     }
     
@@ -67,7 +122,7 @@ main {
     
   /* Diagnostic Styling. Delete When Done. */
   body:before {
-       background: pink;
+       background: yellow;
        content: "Tablet Size";
   } 
     
@@ -97,7 +152,7 @@ main {
   
   /* Diagnostic Styling. Delete When Done. */
   body:before {
-       background: yellowgreen;
+       background: yellow;
        content: "Wide Desktop Size";
   }
 
