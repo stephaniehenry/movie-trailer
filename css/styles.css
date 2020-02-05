@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
 
 body {
-  background-image: url("/imgs/background2.jpg");
+  background-image: url("../imgs/background2.jpg");
   background-size: cover;
 }
 
@@ -53,7 +53,6 @@ h2 {
 }
 
 .info {
-  border: solid red 2px;
   margin: 400px 40px 40px 40px;
 }
 
@@ -107,6 +106,14 @@ a:hover {
     body:before {
          background: yellow;
          content: "Mobile Size";
+    }
+
+    body {
+      background: #F7B626;
+    }
+
+    .info {
+      margin: 40px;
     }
     
     .cast {
