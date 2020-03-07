@@ -7,164 +7,495 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+:root {
+    --font-family: 'Sniglet', cursive;
+    --font-family-header: 'Sniglet', cursive;
+    --font-weight: 400;
+    --font-weight-bold: 700;
+    --font-size-xlarge: 30px;
+    --font-size-large: 25px;
+    --font-size-medium: 20px;
+    --font-size: 16px;
+    --font-size-small: 14px;
+ 	--lineheight-high: 1.75em;
+    --lineheight-normal: 1.5em;
+    --lineheight-tight: 1.2em;
+    --margin-base: 20px;
+    --margin-large: 40px;
+    --margin-xlarge: 60px;
+    --margin-xxlarge: 80px;
+    --margin-xxxlarge: 100px;
+    --grid-gap: 60px;
+    --grid-gap-small: 20px;
+    --grid-gap-vsmall: 0px;
+    --max-width: 92rem;
+    --color-base: black;
+    --color-accent : #B41F07;
+    --color-accent-second : black;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size-xlarge: 30px;
+	    --font-size-large: 28px;
+	    --font-size-medium: 20px;
+	    --font-size: 16px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--font-size-xlarge: 34px;
+	    --font-size-large: 28px;
+	    --font-size-medium: 20px;
+	    --font-size: 16px;
+	}
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+	display:block; 
+	zoom:1;
+}
+
+audio, canvas, video { 
+	display: inline-block; *display: inline; *zoom: 1; 
+}
+
+img {
+	width: 100%;
+}
+
+
+@-ms-viewport {
+    width: device-width
+}
+
+@-o-viewport {
+    width: device-width
+}
+
+@viewport {
+    width: device-width
+}
+
+html {
+box-sizing: border-box;
+overflow-x: hidden;
+-webkit-text-size-adjust: 100%;
+height: 100%;
+}
+
+*, *:before, *:after {
+box-sizing: border-box;
+}
 
 body {
-  background-image: url("../imgs/background2.jpg");
-  background-size: cover;
+	-webkit-font-smoothing: antialiased;
+	font-family: var(--font-family);
+	background: #fff;
+	background-size: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	color: #1a1a1a;
+	height: 100%;
 }
 
-main {
-  margin: 30px 100px 30px 100px;
-  display: grid;
-  grid-template-columns: 1fr;
+html {
+	background-color: #F7B626;
 }
-header {
-  margin: auto;
+
+::-moz-selection {
+    background-color: var(--color-background-selection);
+    text-shadow: none
 }
+
+::selection {
+    background-color: var(--color-background-selection);
+    text-shadow: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 var(--margin-base);
+    font-family: var(--font-family-header);
+    line-height: var(--lineheight-tight);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-base);
+    letter-spacing: -0.01em;
+}
+
 h1 {
-  font-family: 'Sniglet', cursive;
-  font-size: 7em;
-  color: black;
-  text-align: center;
-}
-
-blockquote {
-  font-family: 'Sniglet', cursive;
-  font-size: 3em;
-  text-align: center;
+    margin: 0 0 var(--spacing-x-large);
+    font-size: var(--font-size-xlarge);
 }
 
 h2 {
-  font-family: 'Sniglet', cursive;
-  font-size: 1.25em;
+    font-size: var(--font-size-large);
+}
+
+h3 {
+    font-size: var(--font-size-medium)
+}
+
+h4 {
+    font-size: var(--font-size)
+}
+
+h5,
+h6,
+p,
+ul,
+ol {
+    font-size: var(--font-size);
+    line-height: var(--lineheight-high);
+    font-weight: var(--font-weight);
+}
+
+p {
+	margin-bottom: var(--margin-large);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	color: inherit;
+	font-weight: var(--font-weight-bold);
+}
+
+a:hover {
+	text-decoration: none;
+  color: #B41F07;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a {
+	text-decoration: none;
+}
+
+.headline {
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--lineheight-normal);
+	margin-bottom: 40px;
+}
+
+.xlarge {
+	font-size: var(--font-size-xlarge);
+	line-height: var(--lineheight-tight);
+	margin-bottom: 20px;
+}
+
+.large {
+	font-size: var(--font-size-large);
+	line-height: var(--lineheight-tight);
+	margin-bottom: 20px;
+}
+
+.medium {
+	font-size: var(--font-size-medium);
+	margin: 0 0 var(--margin-base) 0;
+	color: var(--color-accent);
+	line-height: var(--lineheight-tight);
+}
+
+.standard {
+	font-size: var(--font-size);
+	margin: 0 0 var(--margin-base) 0;
+	color: var(--color-accent);
+	line-height: var(--lineheight-normal);
+}
+
+.small {
+	font-size: var(--font-size-small);
+	margin: 0 0 var(--margin-base) 0;
+	color: var(--color-accent);
+	line-height: var(--lineheight-normal);
+}
+
+blockquote {
+	position: relative;
+	padding-left: 20px;
+  color: #B41F07;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bold,
+strong,
+b {
+	font-weight: var(--font-weight-bold);
+}
+
+blockquote {
+	font-family: var(--font-family);
+	font-weight: 400;
+	line-height: 1.2;
+	font-size: var(--font-size-xlarge);
+	color: #B41F07;
+	padding: 50px 0 0 0;
+	position: relative;
+	margin: 20px;
+}
+
+blockquote:before {
+	content: '\201C';
+	position: absolute;
+	font-size: 150px;
+	top: -50px;
+	left: -10px;
+	width: 80px;
+	height: 80px;
+	display: block;
+	color: #B41F07;
+
+}
+
+p + blockquote {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-left: 80px;
+}
+
+strong {
+	font-weight: var(--font-weight-bold);
+}
+
+img {
+	width: 100%;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+main {
+	display: grid;
+	padding: 0px;
+	grid-template-columns: 1fr;
+	grid-gap: 40px 4vw;
+  background: #F7B626;
+}
+
+.headers {
+	padding: 0 20px;
+	align-self: flex-start;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+h1 {
+	font-size: 12vw;
+	grid-column: 1;
+	letter-spacing: -2px;
+	line-height: 1;
+	font-weight: 300;
+}
+
+h1 span {
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 0;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.copy {
+	grid-column: 1;
+	align-content: flex-end;
+	grid-row: 3;
+	padding: 20px;
 }
 
 
-.plyr--full-ui input[type="range"] {
-  color: #F7B626;
-}
-
-.plyr__time {
-  font-size: 15px;
-}
-
-.plyr button {
-  color: #F7B626;
-}
-
-.info {
-  margin: 400px 40px 40px 40px;
+.main-copy {
+	padding: 50px 20px;
 }
 
 .cast {  
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 figure {
-  height: 300px;
-  width: 200px;
+  height: 700px;
+  width: 500px;
+/*   outline: solid red 2px; */
   text-align: center;
 }
 
-img {
-  height: 200px;
-  width: 200px;
+figure img {
+  height: 500px;
+  width: 500px;
   object-fit: cover;
-  
 }
 
-ul {
-  list-style-type: none;
+@media only screen and (min-width: 768px) {
+	main {
+		padding: 0 0 50px;
+		grid-template-columns: 1fr 5fr 1fr;
+		grid-gap: 70px 3vw;
+	}
+
+	.headers {
+		padding: 0 20px;
+		align-self: flex-end;
+		grid-column: 2;
+		grid-row: 2;
+		margin-top: 50px;
+	}
+
+	h1 {
+		font-size: 6vw;
+		grid-column: 1;
+		letter-spacing: -2px;
+		line-height: 0.8;
+	}
+
+	h1 br {
+		display: inline-block;
+	}
+
+	h2 {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	.copy {
+		grid-column: 2;
+	}
+
+
+	.main-copy {
+		grid-column: 2;
+		grid-row: 3;
+		padding: 50px 0;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-width: 210px;
+		-moz-column-width: 210px;
+		column-width: 210px;
+		-webkit-column-gap: 40px;
+		-moz-column-gap: 40px;
+		column-gap: 40px;
+	}
+
+	blockquote {
+		grid-row: 4;
+		grid-column: 2;
+	}
 }
 
-a {
-  color: #CD0000;
-  font-family: 'Sniglet', cursive;
-  font-weight: bold;
-  text-decoration: none;
+
+@media only screen and (min-width: 1400px) {
+	main {
+		grid-template-columns: 1fr 3fr;
+		grid-gap: 50px 4vw;
+		padding: 0 0 40px 40px;
+	}
+
+	.headers {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	h1 {
+		text-align: right;
+	}
+
+	h2 {
+		text-align: right;
+		font-size: 28px;
+	}
+
+	.copy {
+		grid-column: 2;
+		grid-row: 3;
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-width: 210px;
+		-moz-column-width: 210px;
+		column-width: 210px;
+		-webkit-column-gap: 40px;
+		-moz-column-gap: 40px;
+		column-gap: 40px;
+	}
+
+	.image {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	blockquote {
+		grid-row: 2 / span 2;
+		grid-column: 1;
+	}
 }
 
-a:hover {
-  color: white;
-  text-decoration: underline;
-}
 
-
-/* Media Queries */
-/* 
-  Mobile: 
-  * 320px = 20em
-  * 767px = 47.9375em
-*/
-@media only screen 
-  and (min-width: 0) 
-  and (max-width: 48em)  { 
-    
-    /* Diagnostic Styling. Delete When Done. */
-    body:before {
-         background: yellow;
-         content: "Mobile Size";
-    }
-
-    body {
-      background: #F7B626;
-    }
-
-    .info {
-      margin: 40px;
-    }
-    
-    .cast {
-      text-align: center;
-      justify-content: center;
-    }
-  
-}
-
-/* Tablet:  
-  * 768px = 48em 
-    1023px = 63.9375em;
-*/
-@media only screen 
-  and (min-width: 48em) 
-  and (max-width: 64em)  {
-    
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Tablet Size";
-  } 
-    
-}
-
-/* Desktop: 
-  * 1024px = 64em
-  * 64em and larger
-*/
-@media screen 
-  and (min-width: 64em) 
-  and (max-width: 90em) { 
-  
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Desktop Size";
-  }
-
-}
-
-/* Wide Desktop: 
-  * 1440px = 90em
-  * 90em and wider
-*/
-@media screen and (min-width: 90em) { 
-  
-  /* Diagnostic Styling. Delete When Done. */
-  body:before {
-       background: yellow;
-       content: "Wide Desktop Size";
-  }
-
-}
