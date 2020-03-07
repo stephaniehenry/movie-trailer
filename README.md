@@ -9,4 +9,4 @@ Description of movie.
 * [Plyr library](plyr.io/)
 * [Google Fonts](https://fonts.google.com/)
 * [A CodePen Pen](URL_TO_PEN)
-* [ANOTHER_SOURCE]()
+* [CSS Inspiration](https://www.dan-davies.co.uk/print-to-css)
